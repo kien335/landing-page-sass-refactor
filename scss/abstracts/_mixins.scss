@@ -1,0 +1,20 @@
+@use "variables" as v;
+
+@mixin container {
+  width: calc(100% - 40px);
+  max-width: v.$max-width;
+  margin: 0 auto;
+}
+
+@mixin card-surface {
+  background: v.$white;
+  border: 1px solid v.$line;
+  border-radius: v.$radius;
+  box-shadow: v.$shadow;
+}
+
+@mixin on-mobile {
+  @media (max-width: v.$mobile) {
+    @content;
+  }
+}

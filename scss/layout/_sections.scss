@@ -1,0 +1,26 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.section {
+  padding: 80px 0;
+  scroll-margin-top: 100px;
+  &--soft { background: v.$soft; }
+  &__heading {
+    max-width: 690px;
+    margin: 0 auto 38px;
+    text-align: center;
+    h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); line-height: 1.3; margin: 12px 0; }
+    p { color: v.$muted; margin: 0; }
+    &--light {
+      h2, p { color: v.$white; }
+      .eyebrow { color: #ffd2d2; }
+    }
+  }
+  @include m.on-mobile { padding: 56px 0; }
+}
+.cards { display: grid; gap: 22px; }
+.cards--three { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.cards--two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+@include m.on-mobile {
+  .cards--three, .cards--two { grid-template-columns: 1fr; }
+}

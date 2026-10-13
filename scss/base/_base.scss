@@ -1,0 +1,23 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  padding-top: 68px;
+  font-family: Arial, "Roboto", sans-serif;
+  color: v.$text;
+  line-height: 1.6;
+  background: v.$white;
+  @include m.on-mobile { padding-top: 110px; }
+}
+a { text-decoration: none; }
+.container { @include m.container; }
+.eyebrow {
+  display: inline-block;
+  font-size: 0.79rem;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  color: v.$primary;
+}

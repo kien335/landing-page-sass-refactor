@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bài thực hành chuyển CSS của landing page CodeGym Career sang SCSS">
+    <title>CodeGym Career - Landing Page SASS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 1. Navigation và Header -->
+    <nav class="navbar" aria-label="Menu chính">
+        <div class="container navbar__inner">
+            <a class="navbar__brand" href="#gioithieu">CodeGym <span>Career</span></a>
+            <ul class="navbar__links">
+                <li><a href="#gioithieu">Giới thiệu</a></li>
+                <li><a href="#loiich">Lợi ích</a></li>
+                <li><a href="#sanpham">Khóa học</a></li>
+                <li><a href="#thongke">Thống kê</a></li>
+                <li><a href="#lienhe">Liên hệ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero" id="gioithieu">
+        <div class="container hero__inner">
+            <div class="hero__text">
+                <span class="eyebrow">HỌC LẬP TRÌNH THỰC CHIẾN</span>
+                <h1>Trở thành lập trình viên <span>Full-stack</span></h1>
+                <h2>Chỉ sau 5 tháng</h2>
+                <p>Chương trình Coding Bootcamp dành cho người mới bắt đầu, sinh viên CNTT và những người muốn chuyển hướng sang nghề lập trình.</p>
+                <a class="button" href="#sanpham">Khám phá khóa học</a>
+            </div>
+            <div class="hero__art" aria-hidden="true">
+                <div class="laptop">
+                    <div class="laptop__screen">
+                        <span class="code-line code-line--first"></span>
+                        <span class="code-line code-line--second"></span>
+                        <span class="code-line code-line--third"></span>
+                        <span class="code-line code-line--fourth"></span>
+                        <span class="code-line code-line--fifth"></span>
+                    </div>
+                    <div class="laptop__base"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Lợi ích đã có trong landing page trước -->
+    <main>
+        <section class="section" id="loiich">
+            <div class="container">
+                <div class="section__heading">
+                    <span class="eyebrow">GIÁ TRỊ CỐT LÕI</span>
+                    <h2>Tại sao chọn CodeGym Career?</h2>
+                    <p>Học tập thực chiến theo mô hình Coding Bootcamp.</p>
+                </div>
+                <div class="cards cards--three">
+                    <article class="card">
+                        <div class="card__icon" aria-hidden="true">01</div>
+                        <h3>Định hướng sự nghiệp</h3>
+                        <p>Xây dựng tư duy và các kỹ năng cần thiết cho nghề lập trình.</p>
+                    </article>
+                    <article class="card">
+                        <div class="card__icon" aria-hidden="true">02</div>
+                        <h3>Học thông qua làm</h3>
+                        <p>Thực hành lập trình liên tục và phát triển sản phẩm thực tế.</p>
+                    </article>
+                    <article class="card">
+                        <div class="card__icon" aria-hidden="true">03</div>
+                        <h3>Trải nghiệm doanh nghiệp</h3>
+                        <p>Làm việc nhóm, ứng dụng Scrum và Agile vào dự án.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Sản phẩm nổi bật: hai khóa học trong repo gốc -->
+        <section class="section section--soft" id="sanpham">
+            <div class="container">
+                <div class="section__heading">
+                    <span class="eyebrow">SẢN PHẨM ĐÀO TẠO NỔI BẬT</span>
+                    <h2>Khóa học nổi bật</h2>
+                    <p>Chọn lộ trình học lập trình phù hợp với định hướng của bạn.</p>
+                </div>
+                <div class="cards cards--two">
+                    <article class="course-card">
+                        <span class="course-card__tag">Java Web</span>
+                        <h3>CGC JAVA</h3>
+                        <p>Phát triển ứng dụng Web với Java, lập trình hướng đối tượng và cơ sở dữ liệu.</p>
+                        <a class="button button--outline" href="#lienhe">Tìm hiểu thêm</a>
+                    </article>
+                    <article class="course-card">
+                        <span class="course-card__tag">PHP Web</span>
+                        <h3>CGC PHP</h3>
+                        <p>Xây dựng ứng dụng Web với PHP, cơ sở dữ liệu và thực hành dự án.</p>
+                        <a class="button button--outline" href="#lienhe">Tìm hiểu thêm</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Số liệu minh họa dựa trên cấu trúc chương trình trong repo gốc -->
+        <section class="stats" id="thongke">
+            <div class="container">
+                <div class="section__heading section__heading--light">
+                    <span class="eyebrow">CẤU TRÚC CHƯƠNG TRÌNH</span>
+                    <h2>Những con số của trang mẫu</h2>
+                    <p>Số liệu mô tả nội dung bài học, không phải thống kê kết quả đào tạo thực tế.</p>
+                </div>
+                <div class="stats__grid">
+                    <div class="stat"><strong>05</strong><span>Tháng theo lộ trình giới thiệu</span></div>
+                    <div class="stat"><strong>02</strong><span>Khóa học nổi bật</span></div>
+                    <div class="stat"><strong>04</strong><span>Giai đoạn lộ trình mẫu</span></div>
+                    <div class="stat"><strong>03</strong><span>Lợi ích đang giới thiệu</span></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 4. Footer -->
+    <footer class="footer" id="lienhe">
+        <div class="container footer__inner">
+            <div>
+                <h2>CODEGYM CAREER</h2>
+                <p>Chương trình đào tạo lập trình viên theo mô hình Coding Bootcamp.</p>
+            </div>
+            <p>© 2026 CodeGym Career Landing Page<br>Thực hành tái cấu trúc CSS sang SASS</p>
+        </div>
+    </footer>
+</body>
+</html>

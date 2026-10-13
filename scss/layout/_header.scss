@@ -1,0 +1,110 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  min-height: 68px;
+  background: v.$primary;
+  color: v.$white;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
+
+  &__inner {
+    min-height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  &__brand {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: v.$white;
+    white-space: nowrap;
+    span { font-weight: 400; }
+  }
+  &__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    a {
+      color: v.$white;
+      font-weight: 600;
+      font-size: 0.93rem;
+      &:hover, &:focus-visible { text-decoration: underline; }
+    }
+  }
+  @include m.on-mobile {
+    &__inner { flex-direction: column; justify-content: center; padding: 12px 0; gap: 5px; }
+    &__links { justify-content: center; gap: 4px 13px; }
+    &__links a { font-size: 0.80rem; }
+  }
+}
+
+.hero {
+  min-height: calc(100vh - 68px);
+  display: flex;
+  align-items: center;
+  padding: 72px 0 84px;
+  background: linear-gradient(135deg, v.$white 0%, v.$primary-soft 100%);
+  &__inner {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 50px;
+  }
+  &__text {
+    h1 { font-size: clamp(2.15rem, 4.5vw, 3.5rem); line-height: 1.18; margin: 15px 0 8px; }
+    h1 span, h2 { color: v.$primary; }
+    h2 { font-size: clamp(1.25rem, 2.5vw, 1.7rem); margin: 12px 0; }
+    p { max-width: 600px; color: v.$muted; font-size: 1.06rem; margin: 16px 0 26px; }
+  }
+  &__art {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 330px;
+  }
+  @include m.on-mobile {
+    padding: 55px 0 65px;
+    text-align: center;
+    &__inner { grid-template-columns: 1fr; gap: 5px; }
+    &__art { min-height: 245px; }
+    &__text p { margin-left: auto; margin-right: auto; }
+  }
+}
+
+.laptop {
+  width: min(350px, 100%);
+  &__screen {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 14px;
+    min-height: 230px;
+    padding: 35px;
+    border: 10px solid #444;
+    border-radius: 16px 16px 6px 6px;
+    background: #242936;
+    box-shadow: 0 20px 35px rgba(0, 0, 0, 0.13);
+  }
+  &__base { height: 15px; margin: 0 -18px; border-radius: 2px 2px 50% 50%; background: #9ea5ad; }
+}
+.code-line {
+  height: 9px;
+  border-radius: 15px;
+  background: #8bc6ff;
+  width: 70%;
+  &--first { width: 46%; background: #ff7070; }
+  &--second { width: 88%; }
+  &--third { width: 62%; background: #ffdc86; }
+  &--fourth { width: 81%; background: #9de0ba; }
+  &--fifth { width: 38%; }
+}

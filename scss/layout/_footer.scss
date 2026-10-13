@@ -1,0 +1,13 @@
+@use "../abstracts/variables" as v;
+@use "../abstracts/mixins" as m;
+
+.footer {
+  padding: 43px 0;
+  background: #24262b;
+  color: v.$white;
+  scroll-margin-top: 100px;
+  &__inner { display: flex; justify-content: space-between; align-items: center; gap: 30px; }
+  h2 { font-size: 1.1rem; letter-spacing: 0.05em; margin: 0 0 10px; }
+  p { color: #d0d3d9; max-width: 500px; margin: 0; }
+  @include m.on-mobile { &__inner { flex-direction: column; text-align: center; } }
+}
